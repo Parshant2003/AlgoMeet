@@ -13,11 +13,11 @@ app.get("/books", (req, res) => {
   res.status(200).json({ message: "this is a list of books" });
 });
 
-const frontendPath = path.join(__dirname, "..", "frontend", "dist");
+const frontendPath = path.join(__dirname, "frontend", "dist");
 
 app.use(express.static(frontendPath));
 
-app.get("/{*app}", (req, res) => {
+app.get("/{*splat}", (req, res) => {
   res.sendFile(path.join(frontendPath, "index.html"));
 });
 
