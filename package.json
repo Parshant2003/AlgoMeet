@@ -1,22 +1,21 @@
 {
-  "name": "talent-iq",
+  "name": "iq-talent",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
-     "start": "npm run start --prefix backend"
-    
+    "start": "npm start --prefix backend"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Parshant2003/InterviewNest.git"
+    "url": "git+https://github.com/Parshant2003/AlgoMeet.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Parshant2003/InterviewNest/issues"
+    "url": "https://github.com/Parshant2003/AlgoMeet/issues"
   },
-  "homepage": "https://github.com/Parshant2003/InterviewNest#readme"
+  "homepage": "https://github.com/Parshant2003/AlgoMeet#readme"
 }
