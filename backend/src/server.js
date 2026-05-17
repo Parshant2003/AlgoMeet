@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import { ENV } from "./lib/env.js";
+import { connectDB } from "./lib/db.js";
 
 const app = express();
 
@@ -19,6 +20,18 @@ app.get("/{*any}", (req, res) => {
   res.sendFile(path.join(frontendPath, "index.html"));
 });
 
-app.listen(ENV.PORT || 3000, () => {
-  console.log(`Server is running on port ${ENV.PORT || 3000}`);
-});
+
+
+const startServer = async() => {
+  try {
+    await connectDB();
+    app.listen(ENV.PORT || 3000, () => {
+      console.log(`Server is running on port ${ENV.PORT}`);
+    });
+  } catch (error) {
+    console.error('Error starting the server:', error);
+    process.exit(1);
+  }
+}
+
+startServer();
