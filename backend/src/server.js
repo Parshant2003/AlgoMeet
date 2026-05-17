@@ -1,23 +1,21 @@
 import express from "express";
-import { ENV } from "./lib/env.js";
 import path from "path";
+import { fileURLToPath } from "url";
+import { ENV } from "./lib/env.js";
 
 const app = express();
-const __dirname = path.resolve();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const frontendPath = path.resolve(__dirname, "../../frontend/dist");
 
 app.get("/health", (req, res) => {
-  res.status(200).json({ message: "Server is healthy" });
+  res.status(200).json({ msg: "api is up and running" });
 });
-
-app.get("/books", (req, res) => {
-  res.status(200).json({ message: "this is a list of books" });
-});
-
-const frontendPath = path.join(__dirname, "frontend", "dist");
 
 app.use(express.static(frontendPath));
 
-app.get("/{*splat}", (req, res) => {
+app.get("/{*any}", (req, res) => {
   res.sendFile(path.join(frontendPath, "index.html"));
 });
 
