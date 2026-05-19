@@ -3,8 +3,21 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { ENV } from "./lib/env.js";
 import { connectDB } from "./lib/db.js";
+import cors from "cors";
+import { serve } from "inngest/express";
+import { inngest, functions } from "./lib/inngest.js";
 
 const app = express();
+
+// middle ware
+
+app.use(express.json());
+// servers 
+app.use(cors({ origin: ENV.CLIENT_URL, credentials: true }));
+
+app.use("/api/inngest", serve({ client: inngest, functions }));
+
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
