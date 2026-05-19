@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Parshant2003/AlgoMeet/issues"
   },
-  "homepage": "https://github.com/Parshant2003/AlgoMeet#readme"
+  "homepage": "https://github.com/Parshant2003/AlgoMeet#readme",
+  "dependencies": {
+    "@clerk/express": "^1.7.41"
+  }
 }
