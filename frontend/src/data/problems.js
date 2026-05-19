@@ -339,6 +339,525 @@ print(maxArea([1,1]))  # Expected: 1`,
       java: "49\n1",
     },
   },
+
+  "best-time-to-buy-and-sell-stock": {
+  id: "best-time-to-buy-and-sell-stock",
+  title: "Best Time to Buy and Sell Stock",
+  difficulty: "Easy",
+  category: "Array • Dynamic Programming",
+  description: {
+    text: "You are given an array prices where prices[i] is the price of a given stock on the ith day.",
+    notes: [
+      "You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.",
+      "Return the maximum profit you can achieve.",
+    ],
+  },
+  examples: [
+    {
+      input: "prices = [7,1,5,3,6,4]",
+      output: "5",
+      explanation: "Buy on day 2 and sell on day 5.",
+    },
+    {
+      input: "prices = [7,6,4,3,1]",
+      output: "0",
+      explanation: "No profit can be achieved.",
+    },
+  ],
+  constraints: [
+    "1 ≤ prices.length ≤ 10⁵",
+    "0 ≤ prices[i] ≤ 10⁴",
+  ],
+  starterCode: {
+    javascript: `function maxProfit(prices) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(maxProfit([7,1,5,3,6,4])); // Expected: 5
+console.log(maxProfit([7,6,4,3,1])); // Expected: 0`,
+    python: `def maxProfit(prices):
+    # Write your solution here
+    pass
+
+# Test cases
+print(maxProfit([7,1,5,3,6,4]))  # Expected: 5
+print(maxProfit([7,6,4,3,1]))  # Expected: 0`,
+    java: `class Solution {
+    public static int maxProfit(int[] prices) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(maxProfit(new int[]{7,1,5,3,6,4})); // Expected: 5
+        System.out.println(maxProfit(new int[]{7,6,4,3,1})); // Expected: 0
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "5\n0",
+    python: "5\n0",
+    java: "5\n0",
+  },
+},
+
+"valid-parentheses": {
+  id: "valid-parentheses",
+  title: "Valid Parentheses",
+  difficulty: "Easy",
+  category: "Stack • String",
+  description: {
+    text: "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+    notes: [
+      "An input string is valid if open brackets are closed by the same type of brackets in the correct order.",
+    ],
+  },
+  examples: [
+    {
+      input: 's = "()"',
+      output: "true",
+    },
+    {
+      input: 's = "()[]{}"',
+      output: "true",
+    },
+    {
+      input: 's = "(]"',
+      output: "false",
+    },
+  ],
+  constraints: [
+    "1 ≤ s.length ≤ 10⁴",
+    "s consists of parentheses only",
+  ],
+  starterCode: {
+    javascript: `function isValid(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(isValid("()")); // Expected: true
+console.log(isValid("()[]{}")); // Expected: true
+console.log(isValid("(]")); // Expected: false`,
+    python: `def isValid(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(isValid("()"))  # Expected: True
+print(isValid("()[]{}"))  # Expected: True
+print(isValid("(]"))  # Expected: False`,
+    java: `class Solution {
+    public static boolean isValid(String s) {
+        // Write your solution here
+        
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isValid("()")); // Expected: true
+        System.out.println(isValid("()[]{}")); // Expected: true
+        System.out.println(isValid("(]")); // Expected: false
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "true\ntrue\nfalse",
+    python: "True\nTrue\nFalse",
+    java: "true\ntrue\nfalse",
+  },
+},
+
+"binary-search": {
+  id: "binary-search",
+  title: "Binary Search",
+  difficulty: "Easy",
+  category: "Array • Binary Search",
+  description: {
+    text: "Given an array of integers nums sorted in ascending order, and an integer target, return the index of target if it exists.",
+    notes: [
+      "If target does not exist, return -1.",
+      "You must write an algorithm with O(log n) runtime complexity.",
+    ],
+  },
+  examples: [
+    {
+      input: "nums = [-1,0,3,5,9,12], target = 9",
+      output: "4",
+    },
+    {
+      input: "nums = [-1,0,3,5,9,12], target = 2",
+      output: "-1",
+    },
+  ],
+  constraints: [
+    "1 ≤ nums.length ≤ 10⁴",
+    "-10⁴ < nums[i], target < 10⁴",
+    "All integers in nums are unique",
+    "nums is sorted in ascending order",
+  ],
+  starterCode: {
+    javascript: `function search(nums, target) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(search([-1,0,3,5,9,12], 9)); // Expected: 4
+console.log(search([-1,0,3,5,9,12], 2)); // Expected: -1`,
+    python: `def search(nums, target):
+    # Write your solution here
+    pass
+
+# Test cases
+print(search([-1,0,3,5,9,12], 9))  # Expected: 4
+print(search([-1,0,3,5,9,12], 2))  # Expected: -1`,
+    java: `class Solution {
+    public static int search(int[] nums, int target) {
+        // Write your solution here
+        
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(search(new int[]{-1,0,3,5,9,12}, 9)); // Expected: 4
+        System.out.println(search(new int[]{-1,0,3,5,9,12}, 2)); // Expected: -1
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "4\n-1",
+    python: "4\n-1",
+    java: "4\n-1",
+  },
+},
+
+ "merge-two-sorted-lists": {
+  id: "merge-two-sorted-lists",
+  title: "Merge Two Sorted Lists",
+  difficulty: "Easy",
+  category: "Linked List • Recursion",
+  description: {
+    text: "You are given the heads of two sorted linked lists list1 and list2.",
+    notes: [
+      "Merge the two lists into one sorted list.",
+      "The list should be made by splicing together the nodes of the first two lists.",
+    ],
+  },
+  examples: [
+    {
+      input: "list1 = [1,2,4], list2 = [1,3,4]",
+      output: "[1,1,2,3,4,4]",
+    },
+    {
+      input: "list1 = [], list2 = []",
+      output: "[]",
+    },
+  ],
+  constraints: [
+    "The number of nodes in both lists is in the range [0, 50]",
+    "-100 ≤ Node.val ≤ 100",
+    "Both list1 and list2 are sorted in non-decreasing order",
+  ],
+  starterCode: {
+    javascript: `function mergeTwoLists(list1, list2) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(mergeTwoLists([1,2,4], [1,3,4])); // Expected: [1,1,2,3,4,4]
+console.log(mergeTwoLists([], [])); // Expected: []`,
+    python: `def mergeTwoLists(list1, list2):
+    # Write your solution here
+    pass
+
+# Test cases
+print(mergeTwoLists([1,2,4], [1,3,4]))  # Expected: [1,1,2,3,4,4]
+print(mergeTwoLists([], []))  # Expected: []`,
+    java: `class Solution {
+    public static int[] mergeTwoLists(int[] list1, int[] list2) {
+        // Write your solution here
+        
+        return new int[0];
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(
+            mergeTwoLists(new int[]{1,2,4}, new int[]{1,3,4})
+        )); // Expected: [1,1,2,3,4,4]
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[1,1,2,3,4,4]\n[]",
+    python: "[1, 1, 2, 3, 4, 4]\n[]",
+    java: "[1, 1, 2, 3, 4, 4]",
+  },
+},
+
+"climbing-stairs": {
+  id: "climbing-stairs",
+  title: "Climbing Stairs",
+  difficulty: "Easy",
+  category: "Dynamic Programming • Math",
+  description: {
+    text: "You are climbing a staircase. It takes n steps to reach the top.",
+    notes: [
+      "Each time you can either climb 1 or 2 steps.",
+      "Return the number of distinct ways to climb to the top.",
+    ],
+  },
+  examples: [
+    {
+      input: "n = 2",
+      output: "2",
+      explanation: "1 + 1 or 2",
+    },
+    {
+      input: "n = 3",
+      output: "3",
+      explanation: "1 + 1 + 1, 1 + 2, 2 + 1",
+    },
+  ],
+  constraints: [
+    "1 ≤ n ≤ 45",
+  ],
+  starterCode: {
+    javascript: `function climbStairs(n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(climbStairs(2)); // Expected: 2
+console.log(climbStairs(3)); // Expected: 3`,
+    python: `def climbStairs(n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(climbStairs(2))  # Expected: 2
+print(climbStairs(3))  # Expected: 3`,
+    java: `class Solution {
+    public static int climbStairs(int n) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(climbStairs(2)); // Expected: 2
+        System.out.println(climbStairs(3)); // Expected: 3
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "2\n3",
+    python: "2\n3",
+    java: "2\n3",
+  },
+},
+
+"product-of-array-except-self": {
+  id: "product-of-array-except-self",
+  title: "Product of Array Except Self",
+  difficulty: "Medium",
+  category: "Array • Prefix Sum",
+  description: {
+    text: "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements except nums[i].",
+    notes: [
+      "You must write an algorithm that runs in O(n) time.",
+      "Do not use division operation.",
+    ],
+  },
+  examples: [
+    {
+      input: "nums = [1,2,3,4]",
+      output: "[24,12,8,6]",
+    },
+    {
+      input: "nums = [-1,1,0,-3,3]",
+      output: "[0,0,9,0,0]",
+    },
+  ],
+  constraints: [
+    "2 ≤ nums.length ≤ 10⁵",
+    "-30 ≤ nums[i] ≤ 30",
+  ],
+  starterCode: {
+    javascript: `function productExceptSelf(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(productExceptSelf([1,2,3,4])); // Expected: [24,12,8,6]
+console.log(productExceptSelf([-1,1,0,-3,3])); // Expected: [0,0,9,0,0]`,
+    python: `def productExceptSelf(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(productExceptSelf([1,2,3,4]))  # Expected: [24,12,8,6]
+print(productExceptSelf([-1,1,0,-3,3]))  # Expected: [0,0,9,0,0]`,
+    java: `import java.util.*;
+
+class Solution {
+    public static int[] productExceptSelf(int[] nums) {
+        // Write your solution here
+        
+        return new int[0];
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(
+            productExceptSelf(new int[]{1,2,3,4})
+        )); // Expected: [24,12,8,6]
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[24,12,8,6]\n[0,0,9,0,0]",
+    python: "[24, 12, 8, 6]\n[0, 0, 9, 0, 0]",
+    java: "[24, 12, 8, 6]",
+  },
+},
+
+"longest-substring-without-repeating-characters": {
+  id: "longest-substring-without-repeating-characters",
+  title: "Longest Substring Without Repeating Characters",
+  difficulty: "Medium",
+  category: "String • Sliding Window",
+  description: {
+    text: "Given a string s, find the length of the longest substring without repeating characters.",
+    notes: [],
+  },
+  examples: [
+    {
+      input: 's = "abcabcbb"',
+      output: "3",
+      explanation: 'The answer is "abc".',
+    },
+    {
+      input: 's = "bbbbb"',
+      output: "1",
+    },
+    {
+      input: 's = "pwwkew"',
+      output: "3",
+    },
+  ],
+  constraints: [
+    "0 ≤ s.length ≤ 5 * 10⁴",
+    "s consists of English letters, digits, symbols and spaces",
+  ],
+  starterCode: {
+    javascript: `function lengthOfLongestSubstring(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(lengthOfLongestSubstring("abcabcbb")); // Expected: 3
+console.log(lengthOfLongestSubstring("bbbbb")); // Expected: 1
+console.log(lengthOfLongestSubstring("pwwkew")); // Expected: 3`,
+    python: `def lengthOfLongestSubstring(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(lengthOfLongestSubstring("abcabcbb"))  # Expected: 3
+print(lengthOfLongestSubstring("bbbbb"))  # Expected: 1
+print(lengthOfLongestSubstring("pwwkew"))  # Expected: 3`,
+    java: `class Solution {
+    public static int lengthOfLongestSubstring(String s) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(lengthOfLongestSubstring("abcabcbb")); // Expected: 3
+        System.out.println(lengthOfLongestSubstring("bbbbb")); // Expected: 1
+        System.out.println(lengthOfLongestSubstring("pwwkew")); // Expected: 3
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "3\n1\n3",
+    python: "3\n1\n3",
+    java: "3\n1\n3",
+  },
+},
+
+"merge-intervals": {
+  id: "merge-intervals",
+  title: "Merge Intervals",
+  difficulty: "Medium",
+  category: "Array • Sorting",
+  description: {
+    text: "Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals.",
+    notes: [
+      "Return an array of the non-overlapping intervals.",
+    ],
+  },
+  examples: [
+    {
+      input: "intervals = [[1,3],[2,6],[8,10],[15,18]]",
+      output: "[[1,6],[8,10],[15,18]]",
+    },
+    {
+      input: "intervals = [[1,4],[4,5]]",
+      output: "[[1,5]]",
+    },
+  ],
+  constraints: [
+    "1 ≤ intervals.length ≤ 10⁴",
+    "intervals[i].length == 2",
+  ],
+  starterCode: {
+    javascript: `function merge(intervals) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(merge([[1,3],[2,6],[8,10],[15,18]]));
+console.log(merge([[1,4],[4,5]]));`,
+    python: `def merge(intervals):
+    # Write your solution here
+    pass
+
+# Test cases
+print(merge([[1,3],[2,6],[8,10],[15,18]]))
+print(merge([[1,4],[4,5]]))`,
+    java: `import java.util.*;
+
+class Solution {
+    public static int[][] merge(int[][] intervals) {
+        // Write your solution here
+        
+        return new int[0][0];
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.deepToString(
+            merge(new int[][]{{1,3},{2,6},{8,10},{15,18}})
+        ));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[[1,6],[8,10],[15,18]]\n[[1,5]]",
+    python: "[[1, 6], [8, 10], [15, 18]]\n[[1, 5]]",
+    java: "[[1, 6], [8, 10], [15, 18]]",
+  },
+},
 };
 
 export const LANGUAGE_CONFIG = {
